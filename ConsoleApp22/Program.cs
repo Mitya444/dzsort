@@ -32,7 +32,22 @@ for (int i = 0; i < 5; i++)
     }
 }
 
-Array.Sort(simarrange);
+for (int i = 0; i < simarrange.Length - 1; i++)
+
+    for (int j = 0; j < simarrange.Length; j++)
+    {
+        if (j < simarrange.Length - 1)
+        {
+            if (simarrange[j] > simarrange[j + 1])
+            {
+                var temp = simarrange[j];
+                simarrange[j] = simarrange[j + 1];
+                simarrange[j + 1] = temp;
+            }
+        }
+    }
+
+
 
 k = 0;
 for (int i = 0; i < 5; i++)
